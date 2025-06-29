@@ -12,15 +12,7 @@ agent/.env
 agent/abi.json
 # Chinparu Agent
 
-📦 KI-gesteuertes Setup für deinen Chinparu Token auf Sepolia.
 
-## 🧩 Projektstruktur
-
-- contracts/ChinparuTokenV2.sol – smarter Token-Contract  
-- agent/main.py – Python-Agent mit OpenAI-Logik  
-- agent/requirements.txt – benötigte Python-Pakete  
-
-## 🚀 Deployment & Setup
 
 1. Deploy `ChinparuTokenV2.sol` auf Sepolia über Remix.
 2. ABI exportieren → `agent/abi.json` ablegen.
