@@ -47,3 +47,10 @@ git add .
 git commit -m "Initial Chinparu Agent setup"
 git branch -M main
 git push -u origin main
+git init
+git add .
+git commit -m "Initial Chinparu Agent setup"
+git branch -M main
+git remote add origin https://github.com/DEIN_USERNAME/chinparu-agent.git
+git push -u origin main
+https://github.com/MarcMaverick/chinparu-agent
