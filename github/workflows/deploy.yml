@@ -1,0 +1,39 @@
+TOFFIX/
+├── README.md
+├── .gitignore
+├── contracts/Toffix.sol
+├── scripts/deploy.js
+├── hardhat.config.js
+├── web_next/package.json
+├── web_next/pages/index.js
+├── web_next/public/logo.png
+name: Deploy TOFFIX
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: npm install
+      - name: Compile Smart Contract
+        run: npx hardhat compile
+      - name: Deploy Contract
+        env:
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          BASE_RPC: ${{ secrets.BASE_RPC }}
+          TREASURY: ${{ secrets.TREASURY }}
+        run: npx hardhat run scripts/deploy.js --network base
+git clone https://github.com/MarcMaverick/Toffix-.git
+cd Toffix-
+npm install
+npx hardhat compile
