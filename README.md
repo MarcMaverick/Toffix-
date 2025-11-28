@@ -1,7 +1,4 @@
-TOFFIX/
- └── contracts/
-       └── Toffix.sol
-       // scripts/deploy.js
+// scripts/deploy.js
 // Deployment: npx hardhat run scripts/deploy.js --network base
 
 const fs = require("fs");
@@ -39,15 +36,11 @@ async function main() {
 
   // Write output
   const outPath = path.join(__dirname, "..", "deployed-address.txt");
-  
-   
-
-    
-
-
-
-
-  
+  fs.writeFileSync(
+    outPath,
+    `TOFFIX=${toffix.address}\nTREASURY=${treasury}\nNETWORK=${hre.network.name}\n`,
+    "utf8"
+  );
 
   console.log("Saved deployment info to deployed-address.txt");
 
@@ -78,6 +71,3 @@ main().catch((err) => {
   console.error("Deployment error:", err);
   process.exit(1);
 });
-git add scripts/deploy.js
-git commit -m "Fix deploy.js – final working version"
-git push
