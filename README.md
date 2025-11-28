@@ -39,11 +39,15 @@ async function main() {
 
   // Write output
   const outPath = path.join(__dirname, "..", "deployed-address.txt");
-  fs.writeFileSync(
-    outPath,
-    `TOFFIX=${toffix.address}\nTREASURY=${treasury}\nNETWORK=${hre.network.name}\n`,
-    "utf8"
-  );
+  
+   
+
+    
+
+
+
+
+  
 
   console.log("Saved deployment info to deployed-address.txt");
 
